@@ -5,10 +5,11 @@ This library is an extension to Hyperopt (with the original hyperopt
 README.txt below). This is the associated code for the paper found
 here: https://arxiv.org/abs/1706.01566
 
-At a high level, this is simply an extension to hyperopt which 
-incorporates sampling from a DPP. The DPP sampling code is from 
-Alex Kuleza's website (here: http://www.alexkulesza.com/ and
-the code here: http://www.alexkulesza.com/code/dpp.tgz). The original 
+At a high level, this is simply an extension to hyperopt 
+(http://hyperopt.github.io/hyperopt/) which incorporates sampling from
+a DPP. The DPP sampling code is from Alex Kuleza's website 
+(here: http://www.alexkulesza.com/ and the code here: 
+http://www.alexkulesza.com/code/dpp.tgz). The original 
 code DPP code was written in matlab, but we've compiled that matlab
 code to Python and included it here. 
 
