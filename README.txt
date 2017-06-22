@@ -80,10 +80,10 @@ cd hyperopt/dpp_sampler
 
 # note: the last page of this installer has some information on how you need to adjust your 
 # LD_LIBRARY_PATH. if installing on an aws ec2 linux instance in location:
-# /home/ec2-user/software/matlab
+LOCATION=/home/ec2-user/software/matlab
 # then do the following: 
-export LD_LIBRARY_PATH="/usr/lib64:/lib64:/home/ec2-user/software/matlab/v901/runtime/glnxa64:/home/ec2-user/software/matlab/v901/bin/glnxa64:/home/ec2-user/software/matlab/v901/sys/os/glnxa64:/home/ec2-user/software/matlab/v901/sys/opengl/lib/glnxa64"
-export PYTHONPATH="/home/ec2-user/software/matlab/v901/extern/engines/python/dist"
+export LD_LIBRARY_PATH="/usr/lib64:/lib64:${LOCATION}/v901/runtime/glnxa64:${LOCATION}/v901/bin/glnxa64:${LOCATION}/v901/sys/os/glnxa64:${LOCATION}/v901/sys/opengl/lib/glnxa64"
+export PYTHONPATH="${LOCATION}/v901/extern/engines/python/dist"
 
 
 export LD_LIBRARY_PATH="/usr/lib64:/lib64:/homes/gws/jessedd/software/matlab/v901/runtime/glnxa64:/homes/gws/jessedd/software/matlab/v901/bin/glnxa64:/homes/gws/jessedd/software/matlab/v901/sys/os/glnxa64:/homes/gws/jessedd/software/matlab/v901/sys/opengl/lib/glnxa64"
