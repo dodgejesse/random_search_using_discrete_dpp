@@ -78,11 +78,15 @@ cd hyperopt/dpp_sampler
 # it is recommended to install the DPP sampling code to 
 # hyperopt/dpp_sampler, but not necessary. keep track of both locations.
 
-# if installing on aws ec2 linux instance in location:
+# note: the last page of this installer has some information on how you need to adjust your 
+# LD_LIBRARY_PATH. if installing on an aws ec2 linux instance in location:
 # /home/ec2-user/software/matlab
 # then do the following: 
 export LD_LIBRARY_PATH="/usr/lib64:/lib64:/home/ec2-user/software/matlab/v901/runtime/glnxa64:/home/ec2-user/software/matlab/v901/bin/glnxa64:/home/ec2-user/software/matlab/v901/sys/os/glnxa64:/home/ec2-user/software/matlab/v901/sys/opengl/lib/glnxa64"
 export PYTHONPATH="/home/ec2-user/software/matlab/v901/extern/engines/python/dist"
+
+
+export LD_LIBRARY_PATH="/usr/lib64:/lib64:/homes/gws/jessedd/software/matlab/v901/runtime/glnxa64:/homes/gws/jessedd/software/matlab/v901/bin/glnxa64:/homes/gws/jessedd/software/matlab/v901/sys/os/glnxa64:/homes/gws/jessedd/software/matlab/v901/sys/opengl/lib/glnxa64"
 
 
 # to install hyperopt, navigate to the hyperopt directory and run:
