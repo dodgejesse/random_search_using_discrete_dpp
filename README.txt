@@ -107,6 +107,42 @@ pip install pandas
 
 
 
+
+
+###################################################################################################
+# every command needed to install on zin:
+
+git config --global http.sslverify false
+git clone https://github.com/dodgejesse/random_search_using_discrete_dpp.git
+cd random_search_using_discrete_dpp/dpp_sampler
+EXAMPLE_SCRIPT_DIR=`pwd -P`
+./dpp_web.install
+
+# installed matlab to /home/jesse/software/matlab_test
+# installed dpp_sampler to /home/jesse/software/dpp_sampler_test
+
+MATLAB_DIR="/home/jesse/software/matlab_test"
+DPP_SAMP_DIR="/home/jesse/software/dpp_sampler_test"
+
+export LD_LIBRARY_PATH="/usr/lib64:/lib64:${MATLAB_DIR}/v901/runtime/glnxa64:${MATLAB_DIR}/v901/bin/glnxa64:${MATLAB_DIR}/v901/sys/os/glnxa64:${MATLAB_DIR}/v901/sys/opengl/lib/glnxa64"
+export PYTHONPATH="${MATLAB_DIR}/v901/extern/engines/python/dist"
+
+yes | conda create --name dpp_test_2 python
+
+source activate dpp_test_2
+pip install numpy
+
+cd ${DPP_SAMP_DIR}/application
+python setup.py install
+
+cd ${EXAMPLE_SCRIPT_DIR}
+python dpp_samp_test.py
+
+
+
+
+
+
 # Old README.txt from hyperopt: 
 
 hyperopt: Distributed Asynchronous Hyper-parameter Optimization
