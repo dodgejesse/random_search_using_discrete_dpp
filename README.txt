@@ -85,9 +85,7 @@ LOCATION=/home/ec2-user/software/matlab
 export LD_LIBRARY_PATH="/usr/lib64:/lib64:${LOCATION}/v901/runtime/glnxa64:${LOCATION}/v901/bin/glnxa64:${LOCATION}/v901/sys/os/glnxa64:${LOCATION}/v901/sys/opengl/lib/glnxa64"
 export PYTHONPATH="${LOCATION}/v901/extern/engines/python/dist"
 
-
-export LD_LIBRARY_PATH="/usr/lib64:/lib64:/homes/gws/jessedd/software/matlab/v901/runtime/glnxa64:/homes/gws/jessedd/software/matlab/v901/bin/glnxa64:/homes/gws/jessedd/software/matlab/v901/sys/os/glnxa64:/homes/gws/jessedd/software/matlab/v901/sys/opengl/lib/glnxa64"
-
+#here you enter your conda environment
 
 # to install hyperopt, navigate to the hyperopt directory and run:
 pip install -e .
@@ -97,6 +95,7 @@ cd dpp_sampler/application
 python setup.py install
 
 # then the normal dependencies of hyperopt, e.g.:
+pip install numpy # note if using Anaconda, you must use this, not conda install numpy (which causes out of memory errors)
 pip install scipy
 pip install pymongo
 pip install networkx
